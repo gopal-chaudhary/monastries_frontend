@@ -86,11 +86,14 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
+  // Use basename for GitHub Pages deployment
+  const basename = import.meta.env.MODE === 'production' ? '/monastries_frontend' : ''
+  
   return (
     <AuthProvider>
       <MonasteryProvider>
         <AIProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={basename}>
             <AnimatedRoutes />
             <ToastContainer
               position="top-right"
