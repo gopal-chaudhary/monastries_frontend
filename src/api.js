@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3777'
+const API_URL = import.meta.env.API_URL || 'http://localhost:3777'
 
 export const api = axios.create({
   baseURL: `${API_URL}/api/v1`,
@@ -159,7 +159,7 @@ export const aiAPI = {
 
   // SSE streaming chat — returns URL for EventSource
   streamUrl: (message, context, history) => {
-    const base = import.meta.env.VITE_API_URL || 'http://localhost:3777'
+    const base = import.meta.env.API_URL || 'http://localhost:3777'
     const params = new URLSearchParams({
       message,
       monasteryContext: JSON.stringify(context || null),
