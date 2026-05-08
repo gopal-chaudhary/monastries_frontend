@@ -34,7 +34,7 @@ jobs:
         
       - name: Build project
         env:
-          VITE_API_URL: https://monastries-backend-2ytc.onrender.com
+          API_URL: https://monastries-backend-2ytc.onrender.com
         run: npm run build
         
       - name: Setup Pages

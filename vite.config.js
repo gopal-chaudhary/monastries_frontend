@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/final-project/' : '/',
+  base: '/monastries_frontend/',
   plugins: [
     react(),
     VitePWA({
@@ -17,22 +17,22 @@ export default defineConfig(({ mode }) => ({
         theme_color: '#0c0a09',
         background_color: '#0c0a09',
         display: 'standalone',
-        start_url: '/',
+        start_url: '/monastries_frontend/',
         icons: [
           {
-            src: 'vite.svg',
+            src: '/monastries_frontend/vite.svg',
             sizes: '192x192',
             type: 'image/svg+xml',
           },
           {
-            src: 'vite.svg',
+            src: '/monastries_frontend/vite.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
           },
         ],
       },
       workbox: {
-        navigateFallback: '/index.html',
+        navigateFallback: '/monastries_frontend/index.html',
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff,woff2}'],
         runtimeCaching: [
           {
