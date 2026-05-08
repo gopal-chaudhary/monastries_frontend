@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/monastries_frontend/',
+  base: mode === 'production' ? '/monastries_frontend/' : '/',
   plugins: [
     react(),
     VitePWA({
